@@ -119,8 +119,11 @@ const myPow = (a, b, myPrint) => {
  * У реалізації функції має бути застосовано метод Math.max() і apply().
  */
 
-// const list = [12, 23, 100, 34, 56, 9, 233]
-// const myMax = () => {}
+
+const list = [12, 23, 100, 34, 56, 9, 233]
+  const myMax = (arr) => {
+   return Math.max.apply(null, arr)
+  }
 
 // console.log(myMax(list)); // 233
 
@@ -130,7 +133,9 @@ const myPow = (a, b, myPrint) => {
  * Створіть функцію myMul(a, b), яка буде множити числа а і b, повертаючи результат.
  */
 
-// const myMul = () => {}
+const myMul = (a, b) => {
+  return a * b
+}
 
 /*
  * Створіть функції myDouble(n), яка приймає один параметр і подвоює його.
@@ -138,18 +143,17 @@ const myPow = (a, b, myPrint) => {
  * Функція повертає результат обчислення.
  */
 
-// const myDouble
-
+const myDouble = (n) => myMul.bind(null, n, 2)()
 // console.log(myDouble(3)) // = myMul(2, 3) = 6
 // console.log(myDouble(4)) // = myMul(2, 4) = 8
 // console.log(myDouble(5)) // = myMul(2, 5) = 10
 
 // Аналогічним чином створюємо функцію myTriple(n), яка потроює параметр, що приймає, повертаючи результат.
 
-// const myTriple
+const myTriple = (n) => myMul.bind(null, n, 3)()
 
 // console.log(myTriple(3)) // = myMul(3, 3) = 9
 // console.log(myTriple(4)) // = myMul(3, 4) = 12
 // console.log(myTriple(5)) // = myMul(3, 5) = 15
 
-export { counter, counterFactory, myPow, myPrint };
+export { counter, counterFactory, myPow, myPrint, myMax, list, myMul, myDouble, myTriple };
