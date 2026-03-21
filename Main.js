@@ -103,9 +103,11 @@ const myPow = (a, b, myPrint) => {
   const pow = (x, n) => {
     if (n === 1) {
       return x;
-    } else {
-      return x * pow(x, n - 1);
     }
+    if (n < 0) {
+      return 1 / pow(x, -n);
+    }
+    return x * pow(x, n - 1);
   };
 
   const res = pow(a, b);
